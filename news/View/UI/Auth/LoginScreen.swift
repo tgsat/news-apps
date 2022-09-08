@@ -31,7 +31,8 @@ struct LoginScreen: View {
                         
                         HStack {
                             Text(Dictionary.welcome)
-                            .font(.custom("SFPRODISPLAYBOLD", size: 34))
+                                .font(.custom("sf-pro-text-semibold", size: 34))
+                                .tracking(-1)
                                 .fontWeight(.semibold)
                                 .foregroundColor(MyColor.boldHeader)
                             .padding(.top, 30)
@@ -39,7 +40,16 @@ struct LoginScreen: View {
                         }
                         HStack {
                             Text(Dictionary.enterEmail)
-                            .font(.custom("SFPRODISPLAYREGULAR", size: 18))
+                                .font(.custom("sf-pro-text-regular", size: 18))
+                            .fontWeight(.regular)
+                                .foregroundColor(MyColor.grayColors)
+                                .lineLimit(2)
+                        Spacer()
+                        }
+                        
+                        HStack {
+                            Text(Dictionary.toSignIn)
+                            .font(.custom("sf-pro-text-regular", size: 18))
                             .fontWeight(.regular)
                                 .foregroundColor(MyColor.grayColors)
                                 .lineLimit(2)
@@ -51,7 +61,7 @@ struct LoginScreen: View {
                             placeholder: Dictionary.email,
                             keyboardType: .emailAddress).padding(.top, 72)
                         
-                        InputTextfieldView(
+                        InputSecureFieldView(
                             text: self.$pass,
                             placeholder: Dictionary.password,
                             keyboardType: .default)
@@ -86,8 +96,9 @@ struct LoginScreen: View {
                                 .font(.custom("open-sans.bold", size: 18))
                                 .fontWeight(.bold)
                                 .foregroundColor(MyColor.whiteColors)
-                                .padding(.vertical)
-                                .frame(width: UIScreen.main.bounds.width - 50)
+                                .padding(.all, 14)
+                                .frame(maxWidth: .infinity)
+                                
                         }
                         .background(MyColor.orangButtonColors)
                         .cornerRadius(6)
@@ -110,7 +121,15 @@ struct LoginScreen: View {
             }
             
             if self.alert{
-                
+//                BannerModifier(
+//                    data: BannerData(
+//                        title: "",
+//                        detail: "",
+//                        type: self.$error),
+//                    show: false,
+//                    task: "",
+//                    show: self.alert
+//                )
                 ErrorView(alert: self.$alert, error: self.$error)
             }
         }.background(MyColor.backgroundColors).edgesIgnoringSafeArea(.all)

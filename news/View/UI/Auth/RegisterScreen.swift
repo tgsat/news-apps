@@ -35,7 +35,8 @@ struct RegisterScreen: View {
                         
                         HStack {
                         Text(Dictionary.signUp)
-                            .font(.custom("SFPRODISPLAYBOLD", size: 34))
+                            .font(.custom("sf-pro-text-semibold", size: 34))
+                            .tracking(-1)
                             .fontWeight(.semibold)
                             .foregroundColor(MyColor.boldHeader)
                             .padding(.top, 30)
@@ -44,9 +45,17 @@ struct RegisterScreen: View {
                         
                         HStack {
                             Text(Dictionary.enterName)
-                            .font(.custom("SFPRODISPLAYREGULAR", size: 18))
+                            .font(.custom("sf-pro-text-regular", size: 18))
                             .fontWeight(.regular) .foregroundColor(MyColor.grayColors)
-                                .lineLimit(2)
+
+                        Spacer()
+                        }
+                        
+                        HStack {
+                            Text(Dictionary.emailPassword)
+                            .font(.custom("sf-pro-text-regular", size: 18))
+                            .fontWeight(.regular) .foregroundColor(MyColor.grayColors)
+
                         Spacer()
                         }
 
@@ -54,15 +63,15 @@ struct RegisterScreen: View {
                         text: self.$email,
                         placeholder: Dictionary.email,
                         keyboardType: .emailAddress)
-                        .padding(.top, 12)
+                        .padding(.top, 72)
                         
-                        InputTextfieldView(
+                        InputSecureFieldView(
                         text: self.$pass,
                         placeholder: Dictionary.password,
                         keyboardType: .default)
                         .padding(.top, 12)
                         
-                        InputTextfieldView(
+                        InputSecureFieldView(
                         text: self.$repass,
                         placeholder: Dictionary.passwordConfirm,
                         keyboardType: .default)

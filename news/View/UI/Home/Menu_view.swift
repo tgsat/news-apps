@@ -19,7 +19,7 @@ struct MenuView: View {
                     .foregroundColor(.white)
                     .imageScale(.medium)
                 Text(Dictionary.createNews)
-                    .foregroundColor(MyColor.backgroundColors)
+                    .foregroundColor(MyColor.primaryColors)
                     .font(.custom(Dictionary.openSansBold, size: 16))
             }.padding(.top, 100)
             
@@ -28,7 +28,7 @@ struct MenuView: View {
                     .foregroundColor(.white)
                     .imageScale(.medium)
                 Text(Dictionary.profile)
-                    .foregroundColor(MyColor.backgroundColors)
+                    .foregroundColor(MyColor.primaryColors)
                     .font(.custom(Dictionary.openSansBold, size: 16))
             }.padding(.top, 10)
             Spacer()
@@ -54,7 +54,7 @@ struct MenuView: View {
         }
     .padding()
     .frame(maxWidth: .infinity, alignment: .leading)
-    .background(Color.init(red: 32/256, green: 32/256, blue: 32/256))
-        .edgesIgnoringSafeArea(.all)
+    .background(MyColor.backgroundColors)
+    .edgesIgnoringSafeArea(.all)
     }
 }

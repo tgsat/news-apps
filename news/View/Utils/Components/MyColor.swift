@@ -15,8 +15,10 @@ struct MyColor {
     static let backgroundColors = Color("backgroundColor")
     static let blackColors = Color("blackColor")
     static let whiteColors = Color("whiteColor")
+    static let grayTextColors = Color("grayTextColor")
     static let grayColors = Color("grayColor")
     static let boldHeader = Color("BoldHeader")
+    static let orangeColors = Color("orangeButton")
     static let orangButtonColors = Color("orangeButton")
     
 }

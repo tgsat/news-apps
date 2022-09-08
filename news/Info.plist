@@ -2,11 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>icon files</key>
+	<array>
+		<string>launcher.png</string>
+	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>SFPRODISPLAYBOLD.OTF</string>
-		<string>SFPRODISPLAYREGULAR.OTF</string>
-		<string>SFPRODISPLAYULTRALIGHTITALIC.OTF</string>
+		<string>sf-pro-text-regular.ttf</string>
+		<string>sf-pro-text-semibold.ttf</string>
 		<string>open-sans.bold.ttf</string>
 		<string>open-sans.regular.ttf</string>
 		<string>Potential Bold.ttf</string>

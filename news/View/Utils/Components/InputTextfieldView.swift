@@ -16,15 +16,16 @@ struct InputTextfieldView: View {
     var body: some View {
         TextField(placeholder, text: $text)
         .frame(maxWidth: .infinity)
-        .font(.custom("open-sans.regular", size: 14))
-        .foregroundColor(MyColor.grayColors)
+        .font(.custom(Dictionary.openSansReg, size: 14))
+        .foregroundColor(MyColor.grayTextColors)
         .autocapitalization(.none)
         .keyboardType(keyboardType)
-        .padding(.all, 10)
+        .padding([.leading, .trailing], 10)
+        .padding([.top, .bottom], 14)
         .background(MyColor.whiteColors)
-        .background(
+        .overlay(
             RoundedRectangle(cornerRadius: 6, style: .continuous)
-            .stroke(self.text != "" ? MyColor.orangButtonColors : MyColor.whiteColors, lineWidth: 4)
+            .stroke(self.text != "" ? MyColor.orangButtonColors : MyColor.whiteColors, lineWidth: 2)
                 
         )
     }

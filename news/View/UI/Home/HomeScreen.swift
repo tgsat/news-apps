@@ -66,10 +66,26 @@ struct MainView: View {
     @Binding var showMenu: Bool
     
     var body: some View {
-        VStack(alignment: .center) {
-            LottieView(animationName: "404-not-found-page",
-            loopMode: .loop,
-            contentMode: .scaleAspectFit)
+            ScrollView(showsIndicators: true) {
+                
+                VStack {
+                    HStack {
+                        Text(Dictionary.highlightNews)
+                            .font(.custom("sf-pro-text-semibold", size: 18))
+                            .fontWeight(.semibold)
+                            .foregroundColor(MyColor.boldHeader)
+                            
+                        Spacer()
+                    }.padding(.bottom, 12)
+                    
+//                    NewssListView()
+                    
+                }
+
+//            LottieView(animationName: "404-not-found-page",
+//            loopMode: .loop,
+//            contentMode: .scaleAspectFit)
         }.padding(.all, 16)
     }
 }
+

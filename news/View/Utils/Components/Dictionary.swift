@@ -13,26 +13,30 @@ struct Dictionary {
     static let address = "Address"
     static let alreadyHA = "Already have account? "
     // B
-    static let addressDummy = "Jl Cisitu Indah No.9/11 Dago, Bandung"
     // C
     static let cancel = "Cancel"
     static let createNews = "Create News"
     static let createNA = "Create new account."
     static let createA = "Create Account"
     // D
+    static let dailyNews = "Daily News"
     static let dontHA = "Don't have account? "
     // E
     static let email = "Email"
     static let error = "Error"
     static let emailEmpty = "Email id is empty, please fill in e-mail first"
-    static let enterEmail = "Enter your email address to sign in."
-    static let enterName = "Enter your name, Email and Password for sign up."
+    static let enterEmail = "Enter your email address"
+    static let enterYourEmail = "Enter your email address to sign in."
+    static let enterName = "Enter your name,"
+    static let emailPassword = "Email and Password for sign up."
+    static let enterNameEP = "Enter your name, Email and Password for sign up."
     // F
     static let fullName = "Full Name"
     static let firstName = "First Name"
     static let forgetPassword = "Forget Password?"
     // G
     // H
+    static let highlightNews = "Highlight News"
     // I
     // J
     // K
@@ -45,6 +49,8 @@ struct Dictionary {
     static let menu = "Menu"
     static let message = "Message"
     // N
+    static let news = "News"
+    static let newsHighlight = "News Highlight"
     // O
     static let oke = "Oke"
     static let openSans = "open-sans"
@@ -72,7 +78,10 @@ struct Dictionary {
     static let status = "status"
     static let success = "Success"
     static let signUp = "Sign Up"
+    static let sfProSemiBold = "sf-pro-text-semibold"
+    static let sfProSemiReg = "sf-pro-text-regular"
     // T
+    static let toSignIn = "to sign in."
     // U
     // V
     // W
